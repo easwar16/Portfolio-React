@@ -7,7 +7,7 @@
   background: var(--dark-grey);
   backdrop-filter: blur(4px);
   -webkit-backdrop-filter: blur(4px);
-  border: 1px solid rgba(255, 255, 255, 0.18);
+  // border: 1px solid rgba(255, 255, 255, 0.18);
   position: fixed;
   z-index: 2;
 }
@@ -43,7 +43,7 @@
       margin-bottom: 5px;
     }
     a {
-      color: var(--gray-color);
+      color: var(--black-color);
       text-decoration: none;
       flex-direction: column;
       font-weight: 500;
