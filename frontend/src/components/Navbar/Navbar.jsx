@@ -11,12 +11,14 @@ const Navbar = () => {
         <img src={Images.logo} alt="logo" />
       </div>
       <ul className="app__navbar-links">
-        {["HOME", "ABOUT", "WORK", "SKILLS", "CONTACT"].map((item) => (
-          <li className="app__flex p_text" key={`link-${item}`}>
-            <div />
-            <a href={`#${item}`}>{item}</a>
-          </li>
-        ))}
+        {["home", "about", "work", "skills", "testimonials", "contact"].map(
+          (item) => (
+            <li className="app__flex p_text" key={`link-${item}`}>
+              <div />
+              <a href={`#${item}`}>{item}</a>
+            </li>
+          )
+        )}
       </ul>
       <div className="app__navbar-menu">
         <HiMenuAlt4 onClick={() => setToggle(true)} />
@@ -27,7 +29,14 @@ const Navbar = () => {
           >
             <HiX onClick={() => setToggle(false)} />
             <ul>
-              {["home", "about", "work", "skills", "contact"].map((item) => (
+              {[
+                "home",
+                "about",
+                "work",
+                "skills",
+                "testimonials",
+                "contact",
+              ].map((item) => (
                 <li className="app__flex p_text" key={item}>
                   <a href={`#${item}`} onClick={() => setToggle(false)}>
                     {item}
