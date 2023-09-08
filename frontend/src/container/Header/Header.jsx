@@ -22,16 +22,24 @@ const Header = () => (
     >
       <div className="app__header-badge">
         <div className="badge-cmp app__flex">
-          <span>👋</span>
-          <div style={{ marginLeft: 20 }}>
-            <p className="p-text">Hello,I am</p>
-            <h1 className="">Easwar</h1>
+          <div>
+            <p className="p-text">Hello, My Name is </p>
+
+            <h1 className="">
+              <span>🙌</span>Easwar
+            </h1>
           </div>
         </div>
         <div className="tag-cmp app_flex">
-          <p className="p-text">Web Developer</p>
-          <p className="p-text">UI/UX designer</p>
-          <p className="p-text">Freelancer</p>
+          {/* <h2 className="">A lil insight</h2> */}
+          <p className="p-text">
+            I am a Coding enthusiast with a flair for front-end magic and a
+            knack for full-stack wizardry.
+          </p>
+
+          {/* <p className="p-text">
+            
+          </p> */}
         </div>
       </div>
     </motion.div>
@@ -41,13 +49,6 @@ const Header = () => (
       className="app__header-img"
     >
       <img src={Images.profile} alt="profile_bg" />
-      {/* <motion.img
-        whileInView={{ scale: [0, 1] }}
-        transition={{ duration: 1, ease: "easeInOut" }}
-        src={Images.circle}
-        alt="profile_circle"
-        className="overlay_circle"
-      /> */}
     </motion.div>
     <motion.div
       variants={scaleVariants}
