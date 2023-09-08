@@ -1,17 +1,29 @@
 import React from "react";
-import { SocialIcon } from "react-social-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faYoutube,
+  faFacebook,
+  faTwitter,
+  faInstagram,
+  faLinkedin,
+  faGithub,
+} from "@fortawesome/free-brands-svg-icons";
 
 function SocialMedia() {
   return (
     <div className="app__social">
       <div>
-        <SocialIcon
-          network="linkedin"
-          url="https://www.linkedin.com/in/easwar-harikaran-07764321b/"
-        />
+        <a
+          href="https://www.linkedin.com/in/easwar-harikaran-07764321b/"
+          className="linkedin social"
+        >
+          <FontAwesomeIcon icon={faLinkedin} size="2x" />
+        </a>
       </div>
       <div>
-        <SocialIcon network="github" url="https://github.com/easwar16" />
+        <a href="https://github.com/easwar16" className="github social">
+          <FontAwesomeIcon icon={faGithub} size="2x" />
+        </a>
       </div>
     </div>
   );

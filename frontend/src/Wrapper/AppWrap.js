@@ -7,8 +7,12 @@ const AppWrap = (Component, idName, classNames) =>
         <SocialMedia />
         <div className="app__wrapper app__flex">
           <Component />
-          <div className="copyright"></div>
+          <div className="copyright">
+            <p className="p-text">@2023 Easwar</p>
+            <p className="p-text">All rights Reserved</p>
+          </div>
         </div>
+        <NavigationDots />
       </div>
     );
   };

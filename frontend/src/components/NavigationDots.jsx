@@ -9,8 +9,7 @@ function NavigationDots({ active }) {
             href={`#${item}`}
             key={item + index}
             className="app__navigation-dot"
-            style={active===item ? {background:#313BAC}:{}}
-            onClick={() => setToggle(false)}
+            style={active === item ? { backgroundColor: "#313BAC" } : {}}
           />
         )
       )}
