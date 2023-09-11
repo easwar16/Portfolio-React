@@ -6,23 +6,23 @@ import { DarkMode } from "../../components";
 import "./Navbar.scss";
 import { Images } from "../../constants";
 
-const PDF_FILE_URL = "http://localhost:3000/Resume.pdf";
+// const PDF_FILE_URL = "http://localhost:3000/Resume.pdf";
 const Navbar = () => {
   const [toggle, setToggle] = useState(false);
-  const downloadFileAtURL = (url) => {
-    fetch(url)
-      .then((response) => response.blob())
-      .then((blob) => {
-        const blobURL = window.URL.createObjectURL(new Blob([blob]));
-        const fileName = url.split("/").pop();
-        const aTag = document.createElement("a");
-        aTag.href = blobURL;
-        aTag.setAttribute("download", fileName);
-        document.body.appendChild(aTag);
-        aTag.click();
-        aTag.remove();
-      });
-  };
+  // const downloadFileAtURL = (url) => {
+  //   fetch(url)
+  //     .then((response) => response.blob())
+  //     .then((blob) => {
+  //       const blobURL = window.URL.createObjectURL(new Blob([blob]));
+  //       const fileName = url.split("/").pop();
+  //       const aTag = document.createElement("a");
+  //       aTag.href = blobURL;
+  //       aTag.setAttribute("download", fileName);
+  //       document.body.appendChild(aTag);
+  //       aTag.click();
+  //       aTag.remove();
+  //     });
+  // };
 
   return (
     <nav className="app__navbar">
@@ -32,7 +32,7 @@ const Navbar = () => {
       <div className="app__navbar-toggle">
         <DarkMode />
       </div>
-      <div className="app__navbar-resume-btn">
+      {/* <div className="app__navbar-resume-btn">
         <button
           onClick={() => {
             downloadFileAtURL(PDF_FILE_URL);
@@ -40,6 +40,17 @@ const Navbar = () => {
         >
           Resume
         </button>
+      </div> */}
+      <div className="app__navbar-resume-btn">
+        <a href="Resume.pdf" download="Resume.pdf">
+          <button
+          // onClick={() => {
+          //   downloadFileAtURL(PDF_FILE_URL);
+          // }}
+          >
+            Resume
+          </button>
+        </a>
       </div>
       <ul className="app__navbar-links">
         {["home", "about", "work", "skills", "contact"].map((item) => (

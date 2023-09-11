@@ -8,7 +8,7 @@ export default defineConfig({
   name: 'default',
   title: "easwar's_portfolio",
 
-  projectId: 'dz009swe',
+  projectId: 'tx80gfuu',
   dataset: 'production',
 
   plugins: [deskTool(), visionTool()],

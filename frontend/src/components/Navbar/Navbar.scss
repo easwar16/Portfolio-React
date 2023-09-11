@@ -140,6 +140,9 @@
   }
 }
 .app__navbar-resume-btn {
+  a {
+    text-decoration: none;
+  }
   button {
     color: var(--white-color);
     display: flex;

@@ -2,12 +2,12 @@ import sanityClient from "@sanity/client";
 import imageUrlBuilder from "@sanity/image-url";
 
 export const client = sanityClient({
-  projectId: "dz009swe",
+  projectId: "tx80gfuu",
   dataset: "production",
-  apiVersion: "2023-09-08",
+  apiVersion: "2023-09-12",
   useCdn: true,
   token:
-    "sk5xvNAOBSC57PUsTUrn1z4JTAbUEAeW36xPs1Wkhgq6dwgsX7Z9lsrIg3lSGstVMs2kAhyDd7txN1S0B4S63xBDywoLgrlUuM1kRs5YDHaqGRclUaeOzLM5ZhCDThKSncBkSgxLPOTVHXrj6AP8KvQx3vkeqcklOuPe4Pgw72wuSeKTt9MP",
+    "skweyUtpjdRzeQBG5If1Ntm5DcwdTNxcTSQIOB0EJWi5dEEhGNRE8dVQsOB8ivj5PfBUxrwM2r1YJYBFAN9WHF9yODEkAUPTwrZfAULjAOU9FBp5HEREZpK2MrlYTyymdY00PbdmlMy9fHpyca8RgFd72UWy2t5CciUEv4NblqAV3nDgMbub",
 });
 
 const builder = imageUrlBuilder(client);
