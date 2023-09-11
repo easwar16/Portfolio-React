@@ -23,28 +23,21 @@ const Footer = () => {
     setFormData({ ...formData, [name]: value });
   };
 
-  const handleSubmit = (e) => {
+  const sendEmail = (e) => {
     setLoading(true);
     e.preventDefault();
-    const contact = {
-      _type: "contact",
-      name: formData.username,
-      email: formData.email,
-      message: formData.message,
-    };
     emailjs
       .sendForm(
         "service_rmgu1vm",
-        "template_5id1kij",
+        "template_3z5shhy",
         form.current,
-        "YOUR_PUBLIC_KEY"
+        "TN4oBpE6KzPxC3QCk"
       )
       .then(
         (result) => {
-          // client.create(contact);
-          console.log(result.text);
           setLoading(false);
           setIsFormSubmitted(true);
+          console.log(result.text);
         },
         (error) => {
           console.log(error.text);
@@ -54,58 +47,64 @@ const Footer = () => {
 
   return (
     <>
-      <h2 className="head-text">Take a coffee & chat with me</h2>
+      <h2 className="head-text">
+        Take a coffee & <span>chat with me</span>
+      </h2>
 
       <div className="app__footer-cards">
         <div className="app__footer-card ">
           <img src={Images.email} alt="email" />
-          <a href="mailto:hello@micael.com" className="p-text">
-            hello@micael.com
+          <a href="mailto:easwarharikaran1610@gmaill.com" className="p-text">
+            easwarharikaran1610@gmaill.com
           </a>
         </div>
         <div className="app__footer-card">
           <img src={Images.mobile} alt="phone" />
-          <a href="tel:+1 (123) 456-7890" className="p-text">
-            +1 (123) 456-7890
+          <a href="tel:+91 (9789027597)" className="p-text">
+            +91 (9789027597)
           </a>
         </div>
       </div>
+
       {!isFormSubmitted ? (
-        <form ref={form} onSubmit={handleSubmit}>
-          <div className="app__footer-form app__flex">
-            <div className="app__flex">
-              <input
-                className="p-text"
-                type="text"
-                placeholder="Your Name"
-                name="username"
-                value={username}
-                onChange={handleChangeInput}
-              />
-            </div>
-            <div className="app__flex">
-              <input
-                className="p-text"
-                type="email"
-                placeholder="Your Email"
-                name="email"
-                value={email}
-                onChange={handleChangeInput}
-              />
-            </div>
-            <div>
-              <textarea
-                className="p-text"
-                placeholder="Your Message"
-                value={message}
-                name="message"
-                onChange={handleChangeInput}
-              />
-            </div>
-            <button type="button" className="p-text">
-              {!loading ? "Send Message" : "Sending..."}
-            </button>
+        <form
+          ref={form}
+          className="app__footer-form app__flex"
+          onSubmit={sendEmail}
+        >
+          <div className="app__flex">
+            <input
+              type="text"
+              className="p-text"
+              placeholder="Your Name"
+              value={username}
+              onChange={handleChangeInput}
+              name="user_name"
+            />
           </div>
+          <div className="app__flex">
+            <input
+              type="email"
+              className="p-text"
+              placeholder="Your Email"
+              name="user_email"
+              onChange={handleChangeInput}
+            />
+          </div>
+          <div>
+            <textarea
+              className="p-text"
+              value={message}
+              placeholder="Your Message"
+              onChange={handleChangeInput}
+              name="message"
+            />
+          </div>
+          <input
+            className="p-text button"
+            type="submit"
+            value={!loading ? "Send Message" : "Sending..."}
+          />
         </form>
       ) : (
         <div>

@@ -139,3 +139,29 @@
     display: none;
   }
 }
+.app__navbar-resume-btn {
+  button {
+    color: var(--white-color);
+    display: flex;
+    flex: 0.2;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0.8rem 1.5rem;
+    border-radius: 15px;
+    margin: 0 1rem;
+    background-color: var(--black-color);
+    &:hover {
+      cursor: pointer;
+      background-color: var(--secondary-color);
+      border-color: transparent;
+    }
+    @media screen and(min-width: 2000px) {
+      width: 200px;
+      height: 60px;
+    }
+    @media screen and (max-width: 900px) {
+      display: none;
+    }
+  }
+}
