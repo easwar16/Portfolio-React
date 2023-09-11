@@ -19,6 +19,9 @@
   margin: 4em 2rem 2rem;
 
   .app__footer-card {
+    .p-text {
+      color: #000000;
+    }
     min-width: 290px;
     display: flex;
     flex-direction: row;
@@ -92,7 +95,7 @@
       background-color: var(--secondary-color);
 
       font-family: var(--font-base);
-      color: var(--black-color);
+      color: #000000;
       outline: none;
     }
 

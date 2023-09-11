@@ -13,7 +13,30 @@
   --white-color: #ffffff;
   --dark-gray: #a4b69d;
 }
+[data-theme="light"] {
+  --font-base: "DM Sans", sans-serif;
 
+  --primary-color: #ffffff;
+  --primary-color2: #658876;
+  --secondary-color: #b3ac87;
+  --black-color: #030303;
+  --lightGray-color: #e4e4e4;
+  --gray-color: #e2ebde;
+  --brown-color: #46364a;
+  --white-color: #ffffff;
+  --dark-gray: #a4b69d;
+}
+[data-theme="dark"] {
+  --primary-color: #394b41;
+  --primary-color2: #658876;
+  --secondary-color: #b3ac87;
+  --black-color: #ffffff;
+  --lightGray-color: #e4e4e4;
+  --gray-color: #e2ebde;
+  --brown-color: #46364a;
+  --white-color: #030303;
+  --dark-gray: #a4b69d;
+}
 * {
   box-sizing: border-box;
   padding: 0;

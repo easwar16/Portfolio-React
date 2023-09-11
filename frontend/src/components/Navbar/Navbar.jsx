@@ -1,8 +1,11 @@
 import React, { useState } from "react";
 import { HiMenuAlt4, HiX } from "react-icons/hi";
 import { motion } from "framer-motion";
+
+import { DarkMode } from "../../components";
 import "./Navbar.scss";
 import { Images } from "../../constants";
+
 const PDF_FILE_URL = "http://localhost:3000/Resume.pdf";
 const Navbar = () => {
   const [toggle, setToggle] = useState(false);
@@ -25,6 +28,9 @@ const Navbar = () => {
     <nav className="app__navbar">
       <div className="app__navbar-logo">
         <img src={Images.logo} alt="logo" />
+      </div>
+      <div className="app__navbar-toggle">
+        <DarkMode />
       </div>
       <div className="app__navbar-resume-btn">
         <button
@@ -66,16 +72,6 @@ const Navbar = () => {
                   </a>
                 </li>
               ))}
-              <li>
-                <div className="app__navbar-resume-btn-mobile"></div>
-                <button
-                  onClick={() => {
-                    downloadFileAtURL(PDF_FILE_URL);
-                  }}
-                >
-                  Resume
-                </button>
-              </li>
             </ul>
           </motion.div>
         )}

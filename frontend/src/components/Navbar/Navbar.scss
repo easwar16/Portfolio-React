@@ -147,10 +147,11 @@
     flex-direction: row;
     justify-content: flex-start;
     align-items: center;
-    padding: 0.8rem 1.5rem;
+    padding: 0.6rem 1.5rem;
     border-radius: 15px;
-    margin: 0 1rem;
+    margin: 1rem 2rem;
     background-color: var(--black-color);
+    border: transparent;
     &:hover {
       cursor: pointer;
       background-color: var(--secondary-color);
@@ -161,7 +162,11 @@
       height: 60px;
     }
     @media screen and (max-width: 900px) {
-      display: none;
+      margin: 0 auto;
+      flex: 0;
     }
   }
+}
+.app__navbar-toggle {
+  margin: 1rem 1rem;
 }
